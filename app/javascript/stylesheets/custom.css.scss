@@ -1,0 +1,73 @@
+@import "bootstrap";
+
+.page-content {
+  flex: 1 0 auto;
+  background-color: lightblue;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}a
+
+.text-center {
+  text-align: center;
+}
+
+.navbar {
+  background-color: black;
+
+}
+.dropdown-menu {
+background:transparent;
+
+}
+
+.jumbo-bg {
+  //background-image: url("image-bg4.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.nav-link {
+  color: white !important;
+}
+
+.admin-color {
+  color: #FF3333
+}
+
+.mod-color {
+  color: #008000
+}
+
+.owner-color {
+  color: #ff9900
+}
+
+#logo {
+  float: left;
+  font-size: 0.7cm;
+  color: #fff;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#footer {
+  color: grey;
+}
+.navbar-toggler-icon {
+
+  background-color: white;
+
+}
+
+html,
+body {
+  height: 100%;
+}
+
+a:link { text-decoration: none; }
