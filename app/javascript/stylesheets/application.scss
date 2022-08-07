@@ -3,3 +3,102 @@
 .dropdown-item-text {
   color: black;
 }
+
+.onlinemenu {
+  background-color :white;
+  color: black;
+  height: 450px;
+}
+
+.chatmenu {
+  background-color :white;
+  color: black;
+  height: 450px;
+}
+
+.sendbutton {
+
+  background-position: -9px -7px;
+  background-repeat: no-repeat;
+  background-size: 39px 43px;
+  padding-left: 41px;
+  color: #000;
+}
+
+.page-content {
+  flex: 1 0 auto;
+  background-color: lightblue;
+  color: black;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.navbar {
+  background-color: black;
+
+}
+
+.dropdown-menu {
+background:transparent;
+background-color: black;
+margin: 0;
+}
+
+.dropdown-item {
+  color: white;
+  margin: 0;
+}
+
+.jumbo-bg {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.nav-link {
+  color: white !important;
+}
+
+.admin-color {
+  color: #FF3333
+}
+
+.mod-color {
+  color: #008000
+}
+
+.owner-color {
+  color: #ff9900
+}
+
+.navbar-toggler-icon {
+  background-color: white;
+}
+
+#logo {
+  float: left;
+  font-size: 0.7cm;
+  color: #fff;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#footer {
+  color: grey;
+}
+
+#coffee {
+  color: darkorange;
+}
+
+a:link { text-decoration: none; }
