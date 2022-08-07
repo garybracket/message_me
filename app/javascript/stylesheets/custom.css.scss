@@ -1,8 +1,44 @@
 @import "bootstrap";
 
+.dropdown-item-text {
+  color: black;
+  margin: 0;
+}
+
+.onlinemenu {
+  background-color :white;
+  color: black;
+  height: 450px;
+}
+
+.chatmenu {
+  background-color :white;
+  color: black;
+  height: 450px;
+}
+
+.messagearea {
+  width: 800px;
+}
+.sendbutton {
+  background: url('http://i.stack.imgur.com/e2S63.png') #f2f2f2;
+  background-position: -9px -7px;
+  background-repeat: no-repeat;
+  background-size: 39px 43px;
+  padding-left: 41px;
+  color: #000;
+}
+
+.card-body {
+
+}
+
+
+
 .page-content {
   flex: 1 0 auto;
   background-color: lightblue;
+  color: black;
 }
 
 .text-left {
@@ -11,7 +47,7 @@
 
 .text-right {
   text-align: right;
-}a
+}
 
 .text-center {
   text-align: center;
@@ -21,9 +57,16 @@
   background-color: black;
 
 }
+
 .dropdown-menu {
 background:transparent;
+background-color: black;
+margin: 0;
+}
 
+.dropdown-item {
+  color: white;
+  margin: 0;
 }
 
 .jumbo-bg {
@@ -48,6 +91,11 @@ background:transparent;
   color: #ff9900
 }
 
+.navbar-toggler-icon {
+
+  background-color: white;
+}
+
 #logo {
   float: left;
   font-size: 0.7cm;
@@ -59,15 +107,14 @@ background:transparent;
 #footer {
   color: grey;
 }
-.navbar-toggler-icon {
 
-  background-color: white;
-
+#coffee {
+  color: darkorange;
 }
 
 html,
 body {
-  height: 100%;
+
 }
 
 a:link { text-decoration: none; }

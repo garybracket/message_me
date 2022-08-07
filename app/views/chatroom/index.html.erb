@@ -1,1 +1,47 @@
-<h1 class="p-1"> You have reached the root route </h1>
+<h2 class="text-center">
+  <span class="fa-stack fa-1x">
+    <i class="fa-solid fa-coffee fa-stack-1x", id="coffee"></i>
+    <i class="fa-regular fa-circle fa-stack-2x"></i>
+  </span>
+  <br />
+    Say Something!
+</h2>
+
+<br />
+<br />
+
+<div class="container">
+  <div class="row g-5">
+      <div class="col-md-9">
+        <div class="card shadow-lg border-success mb-3 chatmenu">
+          <div class="card-header border text-center">Chatroom</div>
+          <div class="card-body">
+              <%= render @messages %>
+          </div>
+          <div class="card-footer border-dark input-group">
+
+          <%= form_for(@message, html: {class:"", role: "form"}, url: message_path) do |f| %>
+          <div>
+          <%= f.text_field :body, class:"", placeholder: "Enter a message.."  %>
+          <%= f.submit "Send", class: "btn btn-primary sendbutton" %>
+          </div>
+          <% end %>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="card shadow-lg border-success mb-3 onlinemenu">
+          <div class="card-header text-center">Online Users</div>
+          <div class="card-body">
+              <nav class="nav card-text flex-column bg-dark rounded">
+              <a class="nav-link" href="#">User 1</a>
+              <a class="nav-link" href="#">User 2</a>
+              <a class="nav-link" href="#">User 3</a>
+              <a class="nav-link disabled" href="#">Disabled</a>
+              </nav>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>

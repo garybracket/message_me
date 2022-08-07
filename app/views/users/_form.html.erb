@@ -1,0 +1,29 @@
+<div class="container py-5 h-100">
+  <%= render 'shared/errors', obj: @user %>
+  <div class="row d-flex justify-content-center align-items-center h-100">
+
+    <div class="col-12 col-md-8 col-lg-6 col-xl-5">
+
+      <div class="card shadow-lg" style="border-radius: 1rem;">
+
+        <div class="card-body p-5 text-center">
+
+          <div class="container border shadow-lg p-2">
+            <h3 class="mb-3"> <%= @user.new_record? ? "Sign Up" : "Update Account" %> </h3>
+
+              <%= form_with(model: @user, class: "shadow p-3 rounded", local: true) do |f| %>
+              <div class="input-group row">
+                <%= f.label :username, class: "form-label" %>
+                <%= f.text_field :username, class: "col-sm-6 form-control ms-4", placeholder: "Username" %>
+
+                <%= f.label :password, class: "form-label" %>
+                <%= f.password_field :password, class: "col-sm-6 form-control ms-4", placeholder: "Password" %>
+            </div>
+              <%= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: "btn btn-primary m-4") %>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

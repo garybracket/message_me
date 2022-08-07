@@ -4,6 +4,7 @@
     <title>MessageMe</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= favicon_link_tag %>
+    <script src="https://kit.fontawesome.com/e8784acbff.js" crossorigin="anonymous"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -13,8 +14,8 @@
 
   <body class="d-flex flex-column page-content">
     <%= render 'layouts/navigation' %>
-    <%= render 'layouts/messages' %>
     <div class="container">
+    <%= render 'layouts/messages' %>
     <%= yield %>
     </div>
     <br />
