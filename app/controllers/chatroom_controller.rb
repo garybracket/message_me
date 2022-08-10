@@ -5,8 +5,10 @@ class ChatroomController < ApplicationController
   end
 
   def index
+    @current_user = current_user
     @message = Message.new
     @messages = Message.all
+    @users = User.all_except(@current_user)
   end
 
   def new

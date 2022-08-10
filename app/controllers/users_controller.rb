@@ -5,7 +5,7 @@ before_action :logged_in_redirect, only: [:new]
 # before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def show
-
+    
   end
 
   def index

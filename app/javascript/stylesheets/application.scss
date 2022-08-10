@@ -1,9 +1,5 @@
 @import "bootstrap";
 
-.dropdown-item-text {
-  color: black;
-}
-
 .onlinemenu {
   background-color :white;
   color: black;
@@ -17,7 +13,7 @@
 }
 
 .sendbutton {
-
+  background: url('http://i.stack.imgur.com/e2S63.png') #f2f2f2;
   background-position: -9px -7px;
   background-repeat: no-repeat;
   background-size: 39px 43px;
@@ -28,7 +24,6 @@
 .page-content {
   flex: 1 0 auto;
   background-color: lightblue;
-  color: black;
 }
 
 .text-left {
@@ -44,7 +39,6 @@
 }
 
 .navbar {
-  background-color: black;
 
 }
 
@@ -60,6 +54,7 @@ margin: 0;
 }
 
 .jumbo-bg {
+  //background-image: url("image-bg4.jpg");
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -82,7 +77,8 @@ margin: 0;
 }
 
 .navbar-toggler-icon {
-  background-color: white;
+   background-color: white;
+
 }
 
 #logo {
@@ -100,5 +96,6 @@ margin: 0;
 #coffee {
   color: darkorange;
 }
+
 
 a:link { text-decoration: none; }

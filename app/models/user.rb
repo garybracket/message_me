@@ -5,5 +5,7 @@ class User < ApplicationRecord
                        length: { minimum: 3, maximum: 25 }
   has_many :messages
   default_scope {order(created_at: :asc)}
+  scope :all_except, ->(user) { where.not(id: user) }
   has_secure_password
+  after_create_commit { broadcast_append_to "users" }
 end
