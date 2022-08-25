@@ -15,17 +15,17 @@
       <div class="col-md-9">
         <div class="card shadow-lg border-success mb-3 chatmenu">
           <div class="card-header border text-center">Chatroom</div>
-            <div class="card-body">
-              <%= turbo_stream_from "messages" %>
+            <div class="card-body", id="messages2">
+              <%= turbo_stream_from "messages", autoscroll: true %>
                 <div id="messages">
                   <%= render @messages %>
                 </div>
             </div>
           <div class="card-footer border-dark input-group">
 
-          <%= form_for(@message, html: {class:"", role: "form"}, url: message_path) do |f| %>
+          <%= form_for(@message, html: {class:"", role: "form", id: "messages2"}, url: message_path) do |f| %>
           <div>
-          <%= f.text_field :body, class:"", placeholder: "Enter a message.."  %>
+          <%= f.text_field :body, class:"", placeholder: "Enter a message.." %>
           <%= f.submit "Send", class: "btn btn-primary sendbutton" %>
           </div>
           <% end %>
