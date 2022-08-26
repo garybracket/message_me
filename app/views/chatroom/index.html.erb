@@ -16,7 +16,7 @@
         <div class="card shadow-lg border-success mb-3 chatmenu">
           <div class="card-header border text-center">Chatroom</div>
             <div class="card-body", id="messages2">
-              <%= turbo_stream_from "messages", autoscroll: true %>
+              <%= turbo_stream_from "messages" %>
                 <div id="messages">
                   <%= render @messages %>
                 </div>
@@ -36,7 +36,7 @@
       <div class="col-md-3">
         <div class="card shadow-lg border-success mb-3 onlinemenu">
           <div class="card-header text-center">Online Users</div>
-          <div class="card-body">
+          <div class="card-body", id="messages2">
 
                 <%= turbo_stream_from "users" %>
                   <div id="users">
