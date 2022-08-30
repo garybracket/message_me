@@ -1,1 +1,2 @@
-<div><%= link_to user.username, user %> </div>
+<div><%= link_to user.username, user %> <% if user.online? %> <span class="badge
+                                       bg-success">      Online</span> </div> <% end %>

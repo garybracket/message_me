@@ -1,5 +1,11 @@
 <h1 class="text-center p-3"><%= @user.username %>'s Profile</h1>
 <div class="container text-center mt-4">
+  Online: <%= @user.online? %>
+  <br />
+  <br />
+  Last Seen: <%= @user.updated_at %>
+  <br />
+  <br />
   <% if logged_in? && (@user == current_user) %>
     <%= link_to "Edit your profile", edit_user_path(@user), class: "btn btn-info" %>
     <br />

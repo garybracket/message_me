@@ -2,14 +2,16 @@ class UsersController < ApplicationController
 before_action :set_user, only: [:show, :edit, :update, :destroy]
 before_action :require_user, only: [:edit, :update, :index]
 before_action :logged_in_redirect, only: [:new]
+
 # before_action :require_same_user, only: [:edit, :update, :destroy]
 
   def show
-    
+
   end
 
   def index
      @users = User.all
+     @user = User.find(params[:id])
   end
 
   def new

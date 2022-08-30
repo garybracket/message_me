@@ -17,18 +17,19 @@
           <div class="card-header border text-center">Chatroom</div>
             <div class="card-body", id="messages2">
               <%= turbo_stream_from "messages" %>
-                <div id="messages">
-                  <%= render @messages %>
+                <div id="messages" class="m-2">
+                    <%= render @messages %>
                 </div>
             </div>
           <div class="card-footer border-dark input-group">
+            <%= form_with(model: @message, class:"d-flex", role: "form", id: "",
+            data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }, url: message_path, ) do |f| %>
+            <div>
+              <%= f.text_field :body, class:"", placeholder: "Enter a message..", autocomplete: 'off', autofocus: true  %>
+              <%= f.submit "Send", class: "btn btn-primary sendbutton" %>
+            </div>
+            <% end %>
 
-          <%= form_for(@message, html: {class:"", role: "form", id: "messages2"}, url: message_path) do |f| %>
-          <div>
-          <%= f.text_field :body, class:"", placeholder: "Enter a message.." %>
-          <%= f.submit "Send", class: "btn btn-primary sendbutton" %>
-          </div>
-          <% end %>
           </div>
         </div>
       </div>
