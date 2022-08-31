@@ -1,5 +1,5 @@
 class ApplicationController < ActionController::Base
-  helper_method :current_user, :logged_in?, :scroll_bottom, :update_last_seen_at
+  helper_method :current_user, :logged_in?, :update_last_seen_at
   after_action :update_user_online
 
   def current_user

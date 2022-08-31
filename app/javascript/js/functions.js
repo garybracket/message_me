@@ -19,3 +19,10 @@ document.addEventListener("turbo:before-fetch-response", function (e) {
     objDiv2.scrollTop = objDiv2.scrollHeight;
   }
 });
+
+document.addEventListener("turbo:render", function (e) {
+  if(window.document.getElementById("messages2")) {
+    var objDiv3 = document.getElementById("messages2");
+    objDiv3.scrollTop = objDiv3.scrollHeight;
+  }
+});

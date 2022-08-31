@@ -1,5 +1,5 @@
 class ChatroomController < ApplicationController
-  before_action :require_user
+  before_action :require_user, except: [:index]
 
   def show
   end
@@ -9,6 +9,7 @@ class ChatroomController < ApplicationController
     @message = Message.new
     @messages = Message.all
     @users = User.all_except(@current_user)
+    
   end
 
   def new
