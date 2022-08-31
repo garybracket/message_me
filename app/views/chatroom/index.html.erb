@@ -21,6 +21,13 @@
                     <%= render @messages %>
                 </div>
             </div>
+            <script>
+              if(document.getElementById("messages2")) {
+              alert('got alert');
+            }
+
+
+            </script>
           <div class="card-footer border-dark input-group">
             <%= form_with(model: @message, class:"d-flex", role: "form", id: "",
             data: { controller: "reset-form", action: "turbo:submit-end->reset-form#reset" }, url: message_path, ) do |f| %>
