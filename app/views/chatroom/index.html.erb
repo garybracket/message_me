@@ -22,7 +22,7 @@
                 </div>
             </div>
             <script>
-              
+
             </script>
           <div class="card-footer border-dark input-group">
             <%= form_with(model: @message, class:"d-flex", role: "form", id: "",
@@ -39,7 +39,7 @@
 
       <div class="col-md-3">
         <div class="card shadow-lg border-success mb-3 onlinemenu">
-          <div class="card-header text-center">Online Users</div>
+          <div class="card-header text-center">Users</div>
           <div class="card-body", id="messages2">
 
                 <%= turbo_stream_from "users" %>
