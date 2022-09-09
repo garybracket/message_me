@@ -16,6 +16,10 @@
             <%= link_to "About", about_path, class: "nav-link" %>
           </li>
 
+          <li class="nav-item">
+            <%= link_to "Data", data_path, class: "nav-link" %>
+          </li>
+
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               <%= logged_in? ? "[" + current_user.username + "]" : "Not Logged In" %>
