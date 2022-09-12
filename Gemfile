@@ -20,7 +20,9 @@ gem 'hirb'
 # Use Redis adapter to run Action Cable in production
 gem 'redis', '~> 4.0'
 gem "turbo-rails", "~> 1.1"
-gem 'roo'
+gem 'roo' #import Excel
+gem 'figaro'
+
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

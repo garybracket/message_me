@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_09_12_024247) do
+ActiveRecord::Schema.define(version: 2022_09_12_220055) do
 
   create_table "messages", force: :cascade do |t|
     t.text "body"
@@ -21,9 +21,17 @@ ActiveRecord::Schema.define(version: 2022_09_12_024247) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "name"
+    t.string "age"
+    t.string "sex"
+    t.string "geneticresult"
+    t.string "location"
+    t.string "nearestsite"
+    t.string "personalmutation"
+    t.string "familymutation"
+    t.string "condition"
+    t.string "pedigree"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.string "age"
   end
 
   create_table "users", force: :cascade do |t|

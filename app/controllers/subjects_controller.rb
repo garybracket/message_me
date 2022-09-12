@@ -43,21 +43,17 @@ class SubjectsController < ApplicationController
     end
   end
 
-1373658334
+
 
   def import
       puts 'Importing Data'
-      data = Roo::Spreadsheet.open('https://docs.google.com/spreadsheets/d/e/2PACX-1vR5Bycp4s-lhh8EsaQw3RKLyrHKVXNte9Iz-9FRF5PrjYeLEvLqYysczjddNXpDaw/pub?output=xlsx', extension: "xlsx") # opens the spreadsheet
+      data = Roo::Spreadsheet.open("#{ENV['my_url']}", extension: "xlsx") # opens the spreadsheet
       headers = data.row(1) # get header row
       data.each_with_index do |row, idx|
           next if idx == 0 # skip header row
           # create hash from headers and cells
           subject_data = Hash[[headers, row].transpose]
           # next if user exists
-          if Subject.exists?(name: subject_data['name'])
-            puts "User with name #{subject_data['name']} already exists"
-            next
-          end
           subject = Subject.new(subject_data)
           puts "Saving Subject with name: '#{subject.name}'"
           subject.save!
@@ -72,7 +68,7 @@ class SubjectsController < ApplicationController
   end
 
   def subject_params
-    params.require(:subject).permit(:name, :email)
+    params.require(:subject).permit(:name, :age)
   end
 
   # def require_same_user
