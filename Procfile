@@ -1,2 +1,1 @@
-build: rake db:migrate
-release: rake db:seed
+release: rake db:migrate
