@@ -67,8 +67,6 @@ class SubjectsController < ApplicationController
           next if idx == 0 # skip header row
           # create hash from headers and cells
           subject_data = Hash[[headers, row].transpose]
-          # next if user exists
-
           subject = Subject.new(subject_data)
           puts "Saving Subject"
           subject.save!
@@ -79,7 +77,7 @@ class SubjectsController < ApplicationController
 
   def import2
       puts 'Importing Data'
-      data = Roo::Spreadsheet.open("#{ENV['my_url']}", extension: "xlsx") # opens the spreadsheet
+      data = Roo::Spreadsheet.open("#{ENV['my_url']}", extension: "xlsx") # opens the spreadsheet, env url grabs application.yml configs or HEROKU VAR CONFIG named my_url
       headers = data.row(1) # get header row
       data.each_with_index do |row, idx|
           next if idx == 0 # skip header row
