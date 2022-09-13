@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   resources :users, except: [:new]
   post 'message', to: 'messages#create'
   get 'import', to: 'subjects#import'
-
+  get 'import2', to: 'subjects#import2'
+  get 'seturl', to: 'subjects#set_url'
+  get 'deleteall', to: 'subjects#destroy2'
 end

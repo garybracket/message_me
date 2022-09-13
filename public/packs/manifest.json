@@ -1,16 +1,16 @@
 {
-  "actioncable.js": "/packs/js/actioncable-2ebbff3fef7610dcc102.chunk.js",
-  "actioncable.js.map": "/packs/js/actioncable-2ebbff3fef7610dcc102.chunk.js.map",
-  "application.js": "/packs/js/application-94a205b59840959394b7.js",
-  "application.js.map": "/packs/js/application-94a205b59840959394b7.js.map",
+  "application.js": "/packs/js/application-43ebc6ab1ee7adcb98d6.js",
+  "application.js.map": "/packs/js/application-43ebc6ab1ee7adcb98d6.js.map",
   "entrypoints": {
     "application": {
       "js": [
-        "/packs/js/application-94a205b59840959394b7.js"
+        "/packs/js/application-43ebc6ab1ee7adcb98d6.js"
       ],
       "js.map": [
-        "/packs/js/application-94a205b59840959394b7.js.map"
+        "/packs/js/application-43ebc6ab1ee7adcb98d6.js.map"
       ]
     }
-  }
+  },
+  "vendors~actioncable.js": "/packs/js/vendors~actioncable-48379381bcdf66d52874.chunk.js",
+  "vendors~actioncable.js.map": "/packs/js/vendors~actioncable-48379381bcdf66d52874.chunk.js.map"
 }

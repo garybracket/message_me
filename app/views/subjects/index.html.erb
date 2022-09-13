@@ -61,7 +61,19 @@
       <% end %>
     </tbody>
   </table>
+  <br>
+  <br>
+  <br>
+  <%= form_with url: "/seturl", method: :get do |form| %>
+  <%= form.label :query, "URL:" %>
+  <%= form.text_field :query %>
+  <%= form.submit "Import from URL" %>
+  <br>
   <div class="text-center">
-    <%= link_to "Import", import_path, class: "btn btn-outline-info" %>
+    <%= link_to "Import explicitly from Heroku CONFIG VAR", import2_path, class: "btn btn-outline-info" %>
   </div>
+  <div class="text-center">
+    <%= link_to "Delete All", deleteall_path, class: "btn btn-outline-danger" %>
+  </div>
+<% end %>
 </div>

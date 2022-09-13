@@ -1,6 +1,13 @@
 class SubjectsController < ApplicationController
   before_action :set_subject, only: [:show, :destroy]
 
+
+  def set_url
+    url = params[:query]
+    import(url)
+
+  end
+
   def show
   end
 
@@ -43,9 +50,34 @@ class SubjectsController < ApplicationController
     end
   end
 
+  def destroy2
+    if Subject.destroy_all
+      flash[:notice] = "ALL Subjects were deleted successfully."
+      redirect_to subjects_path
+    else
+      flash[:notice] = "ALL Subjects could NOT be deleted"
+    end
+  end
 
+  def import(url)
+      puts 'Importing Data'
+      data = Roo::Spreadsheet.open(url, extension: "xlsx") # opens the spreadsheet
+      headers = data.row(1) # get header row
+      data.each_with_index do |row, idx|
+          next if idx == 0 # skip header row
+          # create hash from headers and cells
+          subject_data = Hash[[headers, row].transpose]
+          # next if user exists
 
-  def import
+          subject = Subject.new(subject_data)
+          puts "Saving Subject with name: '#{subject.name}'"
+          subject.save!
+        end
+        flash[:notice] = "ALL subjects were imported from URL."
+        redirect_to subjects_path
+  end
+
+  def import2
       puts 'Importing Data'
       data = Roo::Spreadsheet.open("#{ENV['my_url']}", extension: "xlsx") # opens the spreadsheet
       headers = data.row(1) # get header row
@@ -58,8 +90,11 @@ class SubjectsController < ApplicationController
           puts "Saving Subject with name: '#{subject.name}'"
           subject.save!
         end
+        flash[:notice] = "ALL subjects were imported from Heroku CONFIG VAR."
         redirect_to subjects_path
   end
+
+
 
   private
 
@@ -70,6 +105,8 @@ class SubjectsController < ApplicationController
   def subject_params
     params.require(:subject).permit(:name, :age)
   end
+
+
 
   # def require_same_user
   #   if current_user != @article.user && (!current_user.mod? && !current_user.admin? && !current_user.owner?)
