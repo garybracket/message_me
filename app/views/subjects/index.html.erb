@@ -1,4 +1,5 @@
 <div class="page-content">
+  <% if !@subjects.empty? %>
   <table class="table align-middle mb-0 bg-white table-responsive">
     <thead class="bg-light">
       <tr>
@@ -64,16 +65,19 @@
   <br>
   <br>
   <br>
+  <% end %>
   <%= form_with url: "/seturl", method: :get do |form| %>
   <%= form.label :query, "URL:" %>
   <%= form.text_field :query %>
   <%= form.submit "Import from URL" %>
   <br>
+
+  <% end %>
   <div class="text-center">
     <%= link_to "Import explicitly from Heroku CONFIG VAR", import2_path, class: "btn btn-outline-info" %>
   </div>
   <div class="text-center">
     <%= link_to "Delete All", deleteall_path, class: "btn btn-outline-danger" %>
   </div>
-<% end %>
+
 </div>

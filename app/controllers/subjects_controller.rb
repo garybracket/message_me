@@ -70,7 +70,7 @@ class SubjectsController < ApplicationController
           # next if user exists
 
           subject = Subject.new(subject_data)
-          puts "Saving Subject with name: '#{subject.name}'"
+          puts "Saving Subject"
           subject.save!
         end
         flash[:notice] = "ALL subjects were imported from URL."
@@ -87,7 +87,7 @@ class SubjectsController < ApplicationController
           subject_data = Hash[[headers, row].transpose]
           # next if user exists
           subject = Subject.new(subject_data)
-          puts "Saving Subject with name: '#{subject.name}'"
+          puts "Saving Subject"
           subject.save!
         end
         flash[:notice] = "ALL subjects were imported from Heroku CONFIG VAR."
