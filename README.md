@@ -38,3 +38,5 @@ once redis-server is running in background, start rails server in cmd prompt or 
 rails s
 now browse to 127.0.0.1 to get into app!
 
+note, if you close WSL redis-server, the app will crash eventually when it tries to read messages from the chatroom. must leave open.
+
