@@ -21,6 +21,8 @@ ActiveRecord::Schema.define(version: 2022_09_12_220055) do
 
   create_table "subjects", force: :cascade do |t|
     t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
     t.string "age"
     t.string "sex"
     t.string "geneticresult"
@@ -30,8 +32,6 @@ ActiveRecord::Schema.define(version: 2022_09_12_220055) do
     t.string "familymutation"
     t.string "condition"
     t.string "pedigree"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
   end
 
   create_table "users", force: :cascade do |t|
